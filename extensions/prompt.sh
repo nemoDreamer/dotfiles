@@ -2,9 +2,9 @@
 function __last_exit_code() {
   local code=$?
   if [ $code = 0 ]; then
-    printf " $1 " $code
+    printf "$1 " $code
   else
-    printf " $2 " $code
+    printf "$2 " $code
   fi
   return $code
 }
@@ -43,11 +43,11 @@ export GIT_PS1_SHOWUNTRACKEDFILES="true"
 export PS1='\[\e[36m\]$(__bundler_ps1 "[%s] ")\[\e[0m\]'
 # * git prompt (branch, dirty/stash/untracked files state)
 (type __git_ps1 2>/dev/null | grep -q 'is a function') &&
-export PS1=$PS1'$(__git_ps1 "(\[\e[0;32m\]%s\[\e[0m\])")'
+export PS1=$PS1'$(__git_ps1 "\[\e[0;32m\][%s]\[\e[0m\] ")'
 # * last exit code (green on success, otherwise red)
 export PS1=$PS1'$(__last_exit_code "\[\033[1;32m\]%s\[\033[00m\]" "\[\033[01;31m\]%s\[\033[00m\]")'
 # * current directory
-export PS1=$PS1'\[\e[36m\]\w\[\e[0m\] '
+export PS1=$PS1'\[\e[36m\][\w]\[\e[0m\] '
 # * dollar prompt
 export PS1=$PS1'$ '
 

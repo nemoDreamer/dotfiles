@@ -29,4 +29,4 @@ alias cd='pushd'
 alias back='popd'
 alias flip='pushd_builtin'
 
-# export dirstacksize=5
+export dirstacksize=5
