@@ -5,14 +5,14 @@
 
 # COMPLETION
 # --------------------------------------------------
-for completion in ~/.shell_setup/completions/*; do
+for completion in "$HOME/.shell_setup/completions/*"; do
   source $completion
 done
 
 
 # EXTENSIONS
 # --------------------------------------------------
-for extension in ~/.shell_setup/extensions/*; do
+for extension in "$HOME/.shell_setup/extensions/*"; do
   source $extension
 done
 
@@ -34,7 +34,7 @@ fi
 # HISTORY
 # --------------------------------------------------
 # load 'always' history
-# fc -R ~/.zhistalways
+history -r "$HOME/.histalways"
 # ignore duplicate history entries
 export HISTCONTROL=erasedups
 # keep TONS of history
