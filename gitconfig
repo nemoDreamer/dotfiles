@@ -1,0 +1,39 @@
+[push]
+  default = tracking
+
+[format]
+  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+
+[user]
+  name = Philip Blyth
+  email = philip.blyth@gmail.com
+
+[alias]
+  aa = add --all
+  ap = add --patch
+  br = branch
+  ca = commit --amend
+  ci = commit -v
+  co = checkout
+  df = diff
+  lg = log -p
+  st = status
+
+  create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
+  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
+  merge-branch = !git checkout master && git merge @{-1}
+  rebase-origin = !git fetch origin && git rebase origin/master
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  ui = auto
+
+[core]
+  editor = subl -w
+  excludesfile = ~/.gitignore
+  autocrlf = input
+
+[merge]
+  ff = only
