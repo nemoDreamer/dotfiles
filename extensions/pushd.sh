@@ -1,4 +1,4 @@
-pushd()
+__pushd()
 {
   if [ $# -eq 0 ]; then
     DIR="${HOME}"
@@ -11,22 +11,22 @@ pushd()
   dirs
 }
 
-pushd_builtin()
+__pushd_builtin()
 {
   builtin pushd > /dev/null
   echo -n "DIRSTACK: "
   dirs
 }
 
-popd()
+__popd()
 {
   builtin popd > /dev/null
   echo -n "DIRSTACK: "
   dirs
 }
 
-alias cd='pushd'
-alias back='popd'
-alias flip='pushd_builtin'
+# alias cd='__pushd'
+# alias back='__popd'
+# alias flip='__pushd_builtin'
 
 export dirstacksize=5
