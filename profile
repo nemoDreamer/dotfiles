@@ -33,12 +33,12 @@ fi
 
 # HISTORY
 # --------------------------------------------------
-# load 'always' history
-history -a "$HOME/.histalways"
 # ignore duplicate history entries
 export HISTCONTROL=erasedups
 # keep TONS of history
 export HISTSIZE=1000000
+# load 'always' history
+history -r "$HOME/.histalways"
 
 
 # CORRECT
