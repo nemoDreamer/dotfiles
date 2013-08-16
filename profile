@@ -5,14 +5,14 @@
 
 # COMPLETION
 # --------------------------------------------------
-for completion in ~/.shell_setup/completions/*; do
+for completion in ~/.completions/*; do
   source $completion
 done
 
 
 # EXTENSIONS
 # --------------------------------------------------
-for extension in ~/.shell_setup/extensions/*; do
+for extension in ~/.extensions/*; do
   source $extension
 done
 
