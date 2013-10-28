@@ -89,6 +89,7 @@ alias hbpc="cpg-s && cd webroot/org/cpg/hbpc && pwd && url"
 alias ecd_poc="ecd-s && webroot/poc && pwd && url"
 alias ccis="p-s && cd web-ccis/active && pwd && url"
 alias ccisccis="p-s && cd web-ccis/active/webroot/lib/cpg/CCIS && pwd && url"
+alias cccis="p-s && cd cpg-ccis/active && pwd && url"
 alias foo="p-s && cd web-foo/active/ && pwd && url"
 alias cl="cpg-s && cd ../branches/redesign_UI_Clicker_Templates/active/webroot/_redesign/clicker_templates && pwd && url"
 
