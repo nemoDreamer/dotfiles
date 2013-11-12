@@ -38,7 +38,7 @@ export HISTCONTROL=erasedups
 # keep TONS of history
 export HISTSIZE=1000000
 # load 'always' history
-history -r "$HOME/.histalways"
+# history -r "$HOME/.histalways"
 
 
 # CORRECT
@@ -71,6 +71,8 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # --------------------------------------------------
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
+# XCode binaries
+export PATH="$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin"
 
 
 # OTHER SETTINGS
