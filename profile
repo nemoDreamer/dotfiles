@@ -71,6 +71,7 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # --------------------------------------------------
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 # XCode binaries
 export PATH="$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin"
 
