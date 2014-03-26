@@ -62,10 +62,8 @@ export LSCOLORS='Exfxcxdxbxegedabagacad'
 # --------------------------------------------------
 # Node
 export NODE_PATH=/usr/local/lib/node_modules
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
+# rbenv
+eval "$(rbenv init -)"
 
 # PATH
 # --------------------------------------------------
