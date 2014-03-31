@@ -62,14 +62,13 @@ export LSCOLORS='Exfxcxdxbxegedabagacad'
 # --------------------------------------------------
 # Node
 export NODE_PATH=/usr/local/lib/node_modules
-# rbenv
-eval "$(rbenv init -)"
+# RVM
+PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # PATH
 # --------------------------------------------------
 # Homebrew
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 # XCode binaries
 export PATH="$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin"
 
@@ -78,3 +77,4 @@ export PATH="$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin"
 # --------------------------------------------------
 # Tabs
 tabs -4
+
