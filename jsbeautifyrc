@@ -14,5 +14,5 @@
   "preserve_newlines": true,
   "space_before_conditional": true,
   "unescape_strings": false,
-  "wrap_line_length": 128
+  "wrap_line_length": false
 }
