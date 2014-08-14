@@ -71,6 +71,9 @@ PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 # XCode binaries
 export PATH="$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin"
+# GO
+export GOPATH="/Users/pblyth/gocode"
+
 
 
 # OTHER SETTINGS
