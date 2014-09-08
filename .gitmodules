@@ -1,0 +1,3 @@
+[submodule "vendors/solarized-osx-terminal-colors"]
+	path = vendors/solarized-osx-terminal-colors
+	url = https://github.com/tamul/solarized-osx-terminal-colors.git
