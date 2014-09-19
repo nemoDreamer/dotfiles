@@ -43,7 +43,7 @@
   excludesfile = ~/.gitignore
   autocrlf = input
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
 [git-up "bundler"]
-	check = true
+  check = true
