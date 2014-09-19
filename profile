@@ -37,8 +37,6 @@ fi
 export HISTCONTROL=erasedups
 # keep TONS of history
 export HISTSIZE=1000000
-# load 'always' history
-# history -r "$HOME/.histalways"
 
 
 # CORRECT
