@@ -13,6 +13,7 @@
   "max_preserve_newlines": 4,
   "preserve_newlines": true,
   "space_before_conditional": true,
+  "space_in_paren": false,
   "unescape_strings": false,
   "wrap_line_length": false
 }
