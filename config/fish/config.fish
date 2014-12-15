@@ -1,21 +1,27 @@
-# oh-my-fish
-# ---
 
-# Path to your oh-my-fish.
-set fish_path $HOME/.oh-my-fish
+# Paths to your tackle
+set tacklebox_path ~/.tackle ~/.tacklebox ~/.oh-my-fish
 
 # Theme
-set fish_theme bobthefish
+set tacklebox_theme bobthefish
 
-# Plugins
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
-# Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
-# Example format: set fish_plugins autojump bundler
-set fish_plugins bak brew bundler emoji-clock extract gi jump localhost rbenv sublime
+# Which modules would you like to load? (modules can be found in ~/.tackle/modules/*)
+# Custom modules may be added to ~/.tacklebox/modules/
+# Example format: set tacklebox_modules virtualfish virtualhooks
 
-# Custom
-# Path to your custom folder (default path is $FISH/custom)
-set fish_custom $HOME/.config/fish
+# Which plugins would you like to enable? (plugins can be found in ~/.tackle/plugins/*)
+# Custom plugins may be added to ~/.tacklebox/plugins/
+# Example format: set tacklebox_plugins python extract
+set tacklebox_plugins bak balias brew bundler emoji-clock extract extract gi git-flow grc jump localhost node pip python rails rbenv sublime up
 
-# Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
+# Load Tacklebox configuration
+. ~/.tacklebox/tacklebox.fish
+
+# ---
+
+# Go
+set -g GOPATH $HOME/gocode
+set -g PATH "$GOPATH/bin" $PATH
+
+# Editor
+set -g EDITOR "subl -w"
