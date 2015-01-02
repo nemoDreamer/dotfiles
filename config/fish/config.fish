@@ -19,9 +19,11 @@ set tacklebox_plugins bak balias brew bundler emoji-clock extract extract gi git
 
 # ---
 
-# Go
-set -g GOPATH $HOME/gocode
-set -g PATH "$GOPATH/bin" $PATH
-
-# Editor
-set -g EDITOR "subl -w"
+# Settings
+set BROWSER open
+# - Editor
+set -g -x EDITOR "subl -w"
+set -g -x VISUAL "subl -w"
+# - Go
+set -g -x GOPATH $HOME/.gocode
+set -g -x PATH "$GOPATH/bin" $PATH

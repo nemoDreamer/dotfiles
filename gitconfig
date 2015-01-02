@@ -39,7 +39,6 @@
   ui = auto
 
 [core]
-  editor = subl -w
   excludesfile = ~/.gitignore
   autocrlf = input
 [filter "media"]
