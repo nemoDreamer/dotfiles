@@ -27,3 +27,5 @@ set -g -x VISUAL "subl -w"
 # - Go
 set -g -x GOPATH $HOME/.gocode
 set -g -x PATH "$GOPATH/bin" $PATH
+# - rbenv
+. (rbenv init -|psub)
