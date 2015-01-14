@@ -162,7 +162,7 @@
 	<key>BackgroundSettingsForInactiveWindows</key>
 	<true/>
 	<key>BlinkText</key>
-	<false/>
+	<true/>
 	<key>CursorColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -178,10 +178,10 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGGBlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKQHCBESVSRudWxs1AkKCwwNDg8QVk5TU2l6ZVhOU2ZGbGFnc1ZOU05hbWVWJGNs
-	YXNzI0AsAAAAAAAAEBCAAoADXxAlVWJ1bnR1TW9ub0Rlcml2YXRpdmVQb3dlcmxpbmUt
-	UmVndWxhctITFBUWWiRjbGFzc25hbWVYJGNsYXNzZXNWTlNGb250ohUXWE5TT2JqZWN0
-	XxAPTlNLZXllZEFyY2hpdmVy0RobVHJvb3SAAQgRGiMtMjc8QktSW2JpcnR2eKClsLnA
-	w8ze4eYAAAAAAAABAQAAAAAAAAAcAAAAAAAAAAAAAAAAAAAA6A==
+	YXNzI0AsAAAAAAAAEBCAAoADXxAXSW5jb25zb2xhdGFGb3JQb3dlcmxpbmXSExQVFlok
+	Y2xhc3NuYW1lWCRjbGFzc2VzVk5TRm9udKIVF1hOU09iamVjdF8QD05TS2V5ZWRBcmNo
+	aXZlctEaG1Ryb290gAEIERojLTI3PEJLUltiaXJ0dniSl6KrsrW+0NPYAAAAAAAAAQEA
+	AAAAAAAAHAAAAAAAAAAAAAAAAAAAANo=
 	</data>
 	<key>FontAntialias</key>
 	<true/>
@@ -192,7 +192,7 @@
 	<key>Linewrap</key>
 	<true/>
 	<key>ProfileCurrentVersion</key>
-	<real>2.02</real>
+	<real>2.04</real>
 	<key>SelectionColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -202,6 +202,10 @@
 	aXZlctEXGFRyb290gAEIERojLTI3O0FITltijY+RlqGqsrW+0NPYAAAAAAAAAQEAAAAA
 	AAAAGQAAAAAAAAAAAAAAAAAAANo=
 	</data>
+	<key>ShowCommandKeyInTitle</key>
+	<true/>
+	<key>ShowShellCommandInTitle</key>
+	<true/>
 	<key>ShowWindowSettingsNameInTitle</key>
 	<false/>
 	<key>TerminalType</key>

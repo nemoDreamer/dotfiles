@@ -1,6 +1,8 @@
+.DS_Store
 fish_history
 fishd.*
 config/fontforge
 config/configstore
 config/filezilla
 generated_completions
+*.sublime-workspace

@@ -2,6 +2,12 @@
 
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
+# Remove dependencies
+
+./support/undependencies.sh
+
+# Remove symlinks
+
 for name in *; do
   target="$HOME/.$name"
   if [ -e "$target" ]; then

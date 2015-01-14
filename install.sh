@@ -1,6 +1,13 @@
 #!/bin/sh
 
 cutstring="DO NOT EDIT BELOW THIS LINE"
+ignore="install.sh uninstall.sh README.md .gitignore .gitmodules support"
+
+# Dependencies
+
+./support/dependencies.sh
+
+# Create symlinks
 
 for name in *; do
   target="$HOME/.$name"
@@ -23,7 +30,7 @@ for name in *; do
       fi
     fi
   else
-    if [ "$name" != 'install.sh' ] && [ "$name" != 'uninstall.sh' ] && [ "$name" != 'README.md' ] && [ "${name:0:1}" != '_' ]; then
+    if [[ ! $ignore =~ "$name" ]]; then
       echo "Creating $target"
       if [ -n "$(grep "$cutstring" "$name")" ]; then
         cp "$PWD/$name" "$target"

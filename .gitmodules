@@ -1,6 +1,15 @@
-[submodule "vendors/solarized-osx-terminal-colors"]
-	path = vendors/solarized-osx-terminal-colors
+[submodule "support/vendors/solarized-osx-terminal-colors"]
+	path = support/vendors/solarized-osx-terminal-colors
 	url = https://github.com/tamul/solarized-osx-terminal-colors.git
-[submodule "vendors/powerline-fonts"]
-	path = vendors/powerline-fonts
+[submodule "support/vendors/powerline-fonts"]
+	path = support/vendors/powerline-fonts
 	url = https://github.com/Lokaltog/powerline-fonts.git
+[submodule "tacklebox"]
+	path = tacklebox
+	url = https://github.com/justinmayer/tacklebox
+[submodule "tackle"]
+	path = tackle
+	url = https://github.com/justinmayer/tackle
+[submodule "oh-my-fish"]
+	path = oh-my-fish
+	url = git://github.com/bpinto/oh-my-fish.git
