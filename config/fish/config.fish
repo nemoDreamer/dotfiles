@@ -30,4 +30,7 @@ set -g -x PATH "$GOPATH/bin" $PATH
 # - Fink
 set -g -x PATH "/sw/bin" $PATH
 # - rbenv
-. (rbenv init -|psub)
+# . (rbenv init - | psub)
+set PATH $HOME/.rbenv/bin $PATH
+set PATH $HOME/.rbenv/shims $PATH
+rbenv rehash >/dev/null ^&1
