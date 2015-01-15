@@ -1,10 +1,12 @@
 #!/bin/sh
 
+source ./support/functions.sh
+
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
 # Remove dependencies
 
-./support/undependencies.sh
+source ./support/undependencies.sh
 
 # Remove symlinks
 
@@ -12,13 +14,17 @@ for name in *; do
   target="$HOME/.$name"
   if [ -e "$target" ]; then
     if [ ! -L "$target" ]; then
-      cutline=`grep -n -m1 "$cutstring" "$target" | sed "s/:.*//"`
-      if [ -n "$cutline" ]; then
-        echo "WARNING: $target exists but is not a symlink."
+      if [ -d $target ]; then
+        warn "$target is an existing directory"
+      else
+        cutline=`grep -n -m1 "$cutstring" "$target" | sed "s/:.*//"`
+        if [ -n "$cutline" ]; then
+          warn "$target exists but is not a symlink"
+        fi
       fi
     else
-	    echo "Removing $target"
-	    rm "$target"
+      success "Removing $target"
+      rm "$target"
     fi
   fi
 done
