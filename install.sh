@@ -34,14 +34,20 @@ for name in *; do
           warn "$target exists but is not a symlink"
         fi
       fi
+    else
+      warn "$target is already a symlink"
     fi
   else
     if [[ ! $ignore =~ " $name " ]]; then
-      if [ -d "$name" ]; then
-        if [ -n "$(grep "$cutstring" "$name")" ]; then
-          success "Copying $target"
-          cp "$PWD/$name" "$target"
-        fi
+      # hiding grep, as shel can't do '-a' w/ executing both sides...
+      testing=false
+      if [ ! -d "$name" ]; then
+        testing=[ -a -n "$(grep "$cutstring" "$name")" ]
+      fi
+
+      if [ testing = false ]; then
+        success "Copying $target"
+        cp "$PWD/$name" "$target"
       else
         success "Symlinking $target"
         ln -s "$PWD/$name" "$target"
