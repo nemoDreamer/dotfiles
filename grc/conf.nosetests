@@ -1,0 +1,12 @@
+regexp=.*FAIL.*
+colours=red
+-
+regexp=(DEBUG):
+colours=bold
+-
+regexp=(Starting rpc call)( to )(.*)( with params)(.*)
+colours=unchanged,white,unchanged,white,unchanged,green
+-
+regexp=(Response body)( is )(.*)
+colours=unchanged,white,unchanged,blue
+count=once
