@@ -28,7 +28,7 @@
   rebase-origin = !git fetch origin && git rebase origin/master
 
   graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset)\t%C(bold green)%d%C(reset) %C(white)%s%C(reset) - %C(bold white)%an%C(reset) %C(bold yellow)(%ar)%C(reset)' --all
-  hist = log --pretty=format:\"%C(bold blue)%h%C(reset) %C(bold yellow)%ad%C(reset) | %s%C(bold green)%d%C(reset) %C(bold white)[%an]%C(reset)\" --graph --date=short
+  hist = log --pretty=format:'%C(bold blue)%h%C(reset) %C(bold yellow)%ad%C(reset) | %s%C(bold green)%d%C(reset) %C(bold white)[%an]%C(reset)' --graph --date=short
   gr = !git graph
   hi = !git hist
 
@@ -41,11 +41,45 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
+	attributesfile = ~/.gitattributes
 [filter "media"]
+	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
-	required = true
 [git-up "bundler"]
   check = true
 [git-up "fetch"]
   prune = false
+
+[difftool "kdiff3"]
+    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+    trustExitCode = false
+[difftool "meld"]
+    path = /sw/bin/meld
+    trustExitCode = false
+[difftool]
+    prompt = false
+[diff]
+    tool = meld
+
+[mergetool "kdiff3"]
+    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+    trustExitCode = false
+[mergetool "meld"]
+    path = /sw/bin/meld
+    trustExitCode = false
+[mergetool]
+    keepBackup = false
+[merge]
+    tool = meld
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

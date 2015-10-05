@@ -1,15 +1,5 @@
 #!/usr/bin/env bash
 
-# SublimeText
-subl_source="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
-subl_target="/usr/local/bin/subl"
-if [[ ! -e "$subl_target" ]]; then
-	success "Symlinking Sublime Text bin"
-	ln -s "$subl_source" "$subl_target"
-else
-	warn "Sublime Text bin already linked"
-fi
-
 # Homebrew
 if [[ ! (brew) ]]; then
 	info "Installing Homebrew:"

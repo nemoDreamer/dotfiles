@@ -1,24 +1,8 @@
+# Path to Oh My Fish install.
+set -gx OMF_PATH /Users/philip/.local/share/omf
 
-# Paths to your tackle
-set tacklebox_path ~/.tackle ~/.tacklebox ~/.oh-my-fish
-
-# Theme
-set tacklebox_theme bobthefish
-
-# Which modules would you like to load? (modules can be found in ~/.tackle/modules/*)
-# Custom modules may be added to ~/.tacklebox/modules/
-# Example format: set tacklebox_modules virtualfish virtualhooks
-set tacklebox_modules virtualfish virtualhooks z
-
-# Which plugins would you like to enable? (plugins can be found in ~/.tackle/plugins/*)
-# Custom plugins may be added to ~/.tacklebox/plugins/
-# Example format: set tacklebox_plugins python extract
-set tacklebox_plugins bak balias brew bundler emoji-clock extract gi git-flow grc jump localhost node pip python rails sublime up
-
-# Load Tacklebox configuration
-source ~/.tacklebox/tacklebox.fish
-
-# ---
+# Customize Oh My Fish configuration path.
+#set -gx OMF_CONFIG /Users/philip/.config/omf
 
 # Settings
 set BROWSER open
@@ -32,8 +16,12 @@ set -g -x PATH "$GOPATH/bin" $PATH
 set -g -x PATH "/sw/bin" $PATH
 # - Python
 set -g -x PYTHONPATH "/sw/Library/Python/2.7/site-packages" $PYTHONPATH
-# - rbenv
-# . (rbenv init - | psub)
-set PATH $HOME/.rbenv/bin $PATH
-set PATH $HOME/.rbenv/shims $PATH
-rbenv rehash >/dev/null ^&1
+# - z
+set -g Z_SCRIPT_PATH $HOME/.dotfiles/support/z/z.sh
+# - GRC
+#   (http://kassiopeia.juls.savba.sk/~garabik/software/grc.html)
+#   - colorize `ls`
+# set -U grcplugin_ls -G
+
+# Load oh-my-fish configuration.
+source $OMF_PATH/init.fish
