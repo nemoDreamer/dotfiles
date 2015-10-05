@@ -41,7 +41,7 @@ else
 fi
 if [ ! -n "$(grep $fish_shell $etc_shells)" ]; then
 	info "Adding Fish to acceptable shells"
-	echo $fish_shell >> $etc_shells
+	echo $fish_shell | sudo tee -a $etc_shells > /dev/null
 else
 	success "Fish already in acceptable shells"
 fi
