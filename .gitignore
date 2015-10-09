@@ -1,8 +1,14 @@
 .DS_Store
+
 fish_history
 fishd.*
-config/fontforge
+
+generated_completions
+
 config/configstore
 config/filezilla
-generated_completions
+config/fontforge
+config/meld
+config/Unreal Engine
+
 *.sublime-workspace
