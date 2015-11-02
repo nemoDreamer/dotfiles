@@ -9,6 +9,7 @@ config/configstore
 config/filezilla
 config/fontforge
 config/meld
+config/menus
 config/Unreal Engine
 
 *.sublime-workspace
