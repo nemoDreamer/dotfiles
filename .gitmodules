@@ -4,15 +4,12 @@
 [submodule "support/vendors/powerline-fonts"]
 	path = support/vendors/powerline-fonts
 	url = https://github.com/Lokaltog/powerline-fonts.git
-[submodule "tacklebox"]
-	path = tacklebox
-	url = https://github.com/justinmayer/tacklebox
-[submodule "tackle"]
-	path = tackle
-	url = https://github.com/justinmayer/tackle
 [submodule "oh-my-fish"]
 	path = oh-my-fish
 	url = git://github.com/bpinto/oh-my-fish.git
 [submodule "support/z"]
 	path = support/z
 	url = git@github.com:rupa/z.git
+[submodule "support/grc"]
+	path = support/grc
+	url = git@github.com:garabik/grc.git

@@ -1,8 +1,8 @@
 # Path to Oh My Fish install.
-set -gx OMF_PATH /Users/philip/.local/share/omf
+set -gx OMF_PATH "/Users/philip/.local/share/omf"
 
 # Customize Oh My Fish configuration path.
-#set -gx OMF_CONFIG /Users/philip/.config/omf
+set -gx OMF_CONFIG "/Users/philip/.config/omf"
 
 # Settings
 set BROWSER open
@@ -17,11 +17,11 @@ set -g -x PATH "/sw/bin" $PATH
 # - Python
 set -g -x PYTHONPATH "/sw/Library/Python/2.7/site-packages" $PYTHONPATH
 # - z
-set -g Z_SCRIPT_PATH $HOME/.dotfiles/support/z/z.sh
+set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
 # - GRC
 #   (http://kassiopeia.juls.savba.sk/~garabik/software/grc.html)
 #   - colorize `ls`
 # set -U grcplugin_ls -G
 
 # Load oh-my-fish configuration.
-source $OMF_PATH/init.fish
+source "$OMF_PATH/init.fish"

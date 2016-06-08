@@ -10,8 +10,12 @@ else
 fi
 
 # rbenv
-info "Installing rbenv:"
-brew install rbenv ruby-build
+if [[ ! (rbenv) ]]; then
+	info "Installing rbenv:"
+	brew install rbenv ruby-build
+else
+	success "rbenv already installed"
+fi
 
 # Git submodules
 info "Initializing git submodules\n"
@@ -54,4 +58,12 @@ if [[ ! (tig) ]]; then
 	cd .. && rm-rf $tig_tmp
 else
 	success "TIG already installed"
+fi
+
+# GRC
+if [[ ! (grc) ]]; then
+	info "Installing GRC:"
+	./support/grc/install.sh
+else
+	success "GRC already installed"
 fi
