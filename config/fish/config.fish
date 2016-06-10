@@ -14,6 +14,8 @@ set -g -x GOPATH $HOME/.gocode
 set -g -x PATH "$GOPATH/bin" $PATH
 # - Fink
 set -g -x PATH "/sw/bin" $PATH
+# - tank
+set -g -x PATH "$HOME/Library/Application Support/Shotgun/vm.shotgun.local/site" $PATH
 # - Python
 set -g -x PYTHONPATH "/sw/Library/Python/2.7/site-packages" $PYTHONPATH
 # - z
