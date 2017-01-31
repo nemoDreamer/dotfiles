@@ -11,5 +11,8 @@ config/fontforge
 config/meld
 config/menus
 config/Unreal Engine
+config/E_Line Media
+config/Might and Delight
+config/QtProject
 
 *.sublime-workspace

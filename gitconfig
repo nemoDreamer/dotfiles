@@ -10,7 +10,8 @@
   ap = add --patch
   br = branch
   ca = commit --amend
-  ci = commit -v
+  ci = commit
+  civ = commit -v
   co = checkout
   df = diff
   lg = log -p
@@ -18,6 +19,10 @@
 
   info = !git config --local -l
   rah = !git add --all && git reset --hard
+
+  fs = !git flow feature start
+  ff = !git flow feature finish
+  fc = !git flow feature checkout
 
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
@@ -28,6 +33,7 @@
   hist = log --pretty=format:'%C(bold blue)%h%C(reset) %C(bold yellow)%ad%C(reset) | %s%C(bold green)%d%C(reset) %C(bold white)[%an]%C(reset)' --graph --date=short
   gr = !git graph
   hi = !git hist
+  stash-rename = "!_() { rev=$(git rev-parse $1) && git stash drop $1 || exit 1 ; git stash store -m \"$2\" $rev; }; _"
 
 [color]
   branch = auto
