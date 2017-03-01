@@ -6,13 +6,14 @@ fishd.*
 generated_completions
 
 config/configstore
+config/E_Line Media
 config/filezilla
 config/fontforge
+config/heroku
 config/meld
 config/menus
-config/Unreal Engine
-config/E_Line Media
 config/Might and Delight
 config/QtProject
+config/Unreal Engine
 
 *.sublime-workspace
