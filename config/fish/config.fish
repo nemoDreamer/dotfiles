@@ -4,6 +4,9 @@ set -gx OMF_PATH "/Users/philip/.local/share/omf"
 # Customize Oh My Fish configuration path.
 set -gx OMF_CONFIG "/Users/philip/.config/omf"
 
+# Colors
+source "$HOME/.dotfiles/support/colors.sh"
+
 # Settings
 set BROWSER open
 # - Editor
