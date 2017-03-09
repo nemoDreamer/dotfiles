@@ -4,6 +4,3 @@
 [submodule "support/z"]
 	path = support/z
 	url = git@github.com:rupa/z.git
-[submodule "support/grc"]
-	path = support/grc
-	url = git@github.com:garabik/grc.git

@@ -23,10 +23,6 @@ set -g -x PATH "$HOME/Library/Application Support/Shotgun/vm.shotgun.local/site"
 set -g -x PYTHONPATH "/sw/Library/Python/2.7/site-packages" $PYTHONPATH
 # - z
 set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
-# - GRC
-#   (http://kassiopeia.juls.savba.sk/~garabik/software/grc.html)
-#   - colorize `ls`
-# set -U grcplugin_ls -G
 # - BobTheFish
 set -g default_user your_normal_user
 set -g theme_color_scheme dark

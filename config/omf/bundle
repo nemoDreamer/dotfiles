@@ -1,13 +1,9 @@
 package brew
 package bundler
-package extract
 package gi
 package git-flow
-package git@github.com:oh-my-fish/plugin-bak.git
 package git@github.com:oh-my-fish/plugin-balias.git
 package git@github.com:oh-my-fish/plugin-git-flow.git
-package git@github.com:oh-my-fish/plugin-node.git
-package grc
 package osx
 package python
 package rails
