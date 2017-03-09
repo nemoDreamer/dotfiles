@@ -1,12 +1,6 @@
-[submodule "support/vendors/solarized-osx-terminal-colors"]
-	path = support/vendors/solarized-osx-terminal-colors
-	url = https://github.com/tamul/solarized-osx-terminal-colors.git
-[submodule "support/vendors/powerline-fonts"]
-	path = support/vendors/powerline-fonts
-	url = https://github.com/Lokaltog/powerline-fonts.git
 [submodule "oh-my-fish"]
 	path = oh-my-fish
-	url = git://github.com/bpinto/oh-my-fish.git
+	url = git://github.com/oh-my-fish/oh-my-fish.git
 [submodule "support/z"]
 	path = support/z
 	url = git@github.com:rupa/z.git
