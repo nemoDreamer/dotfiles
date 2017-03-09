@@ -27,6 +27,12 @@ set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
 #   (http://kassiopeia.juls.savba.sk/~garabik/software/grc.html)
 #   - colorize `ls`
 # set -U grcplugin_ls -G
+# - BobTheFish
+set -g default_user your_normal_user
+set -g theme_color_scheme dark
+set -g theme_display_vagrant yes
+set -g theme_display_vi no
+set -g theme_nerd_fonts yes
 
 # Load oh-my-fish configuration.
 source "$OMF_PATH/init.fish"
