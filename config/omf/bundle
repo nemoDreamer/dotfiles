@@ -9,5 +9,6 @@ package python
 package rails
 package rbenv
 package sublime
+package thefuck
 package z
 theme bobthefish

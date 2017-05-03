@@ -18,7 +18,7 @@
 
   info = !git config --local -l
   rah = !git add --all && git reset --hard
-  brg = !git branch --list | grep
+  bg = "!sh -c \"git branch --list *$1*\" -"
 
   fs = !git flow feature start
   ff = !git flow feature finish

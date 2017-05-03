@@ -12,6 +12,8 @@ set BROWSER open
 # - Editor
 set -g -x EDITOR "subl -w"
 set -g -x VISUAL "subl -w"
+# - Bundler
+set -g -x BUNDLE_TRAMPOLINE_FORCE 1
 # - Go
 set -g -x GOPATH $HOME/.gocode
 set -g -x PATH "$GOPATH/bin" $PATH
@@ -19,12 +21,14 @@ set -g -x PATH "$GOPATH/bin" $PATH
 set -g -x PATH "/sw/bin" $PATH
 # - tank
 set -g -x PATH "$HOME/Library/Application Support/Shotgun/vm.shotgun.local/site" $PATH
+# - Node.js
+set -g -x PATH "./node_modules/.bin" $PATH
 # - Python
 set -g -x PYTHONPATH "/sw/Library/Python/2.7/site-packages" $PYTHONPATH
 # - z
 set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
 # - BobTheFish
-set -g default_user your_normal_user
+set -g default_user philip
 set -g theme_color_scheme dark
 set -g theme_display_vagrant yes
 set -g theme_display_vi no
