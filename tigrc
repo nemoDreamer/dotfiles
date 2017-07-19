@@ -5,8 +5,8 @@ set main-view = \
   commit-title:graph=true,refs=true
 
 set blame-view-line-number = true
-
 set blame-options = -C -C -C # Blame lines from other files
+
 # set commit-order = topo # (too slow to load...)
 set editor-line-number = true # Whether to pass the selected line number to the editor command.
 set git-colors = no # Do not read Git's color settings.
@@ -15,3 +15,4 @@ set line-graphics = utf-8 # Fancy branch graph lines
 # set mouse = true # Whether to enable mouse support.
 set refresh-mode = auto
 set wrap-lines = true # Wrap long lines
+set diff-highlight = true
