@@ -1,5 +1,5 @@
 [format]
-  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset %C(bold)(%an)%C(nobold) %s %C(dim)%b%Creset
 
 [user]
   name = Philip Blyth

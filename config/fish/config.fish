@@ -30,9 +30,11 @@ set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
 # - BobTheFish
 set -g default_user philip
 set -g theme_color_scheme dark
+set -g theme_display_git_ahead_verbose yes
 set -g theme_display_vagrant yes
 set -g theme_display_vi no
 set -g theme_nerd_fonts yes
+# set -g theme_newline_cursor yes
 
 # Load oh-my-fish configuration.
 source "$OMF_PATH/init.fish"
