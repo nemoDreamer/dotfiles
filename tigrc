@@ -1,3 +1,6 @@
+# Options
+# ---
+
 set main-view = \
   id:true \
   date:relative \
@@ -8,6 +11,7 @@ set blame-view-line-number = true
 set blame-options = -C -C -C # Blame lines from other files
 
 # set commit-order = topo # (too slow to load...)
+set diff-highlight = true
 set editor-line-number = true # Whether to pass the selected line number to the editor command.
 set git-colors = no # Do not read Git's color settings.
 set ignore-case = true # Ignore case in searches
@@ -15,4 +19,9 @@ set line-graphics = utf-8 # Fancy branch graph lines
 # set mouse = true # Whether to enable mouse support.
 set refresh-mode = auto
 set wrap-lines = true # Wrap long lines
-set diff-highlight = true
+
+# Commands
+# ---
+
+bind status X !rm %(file)
+bind status Z !git cz

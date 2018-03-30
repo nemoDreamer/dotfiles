@@ -1,5 +1,6 @@
 package brew
 package bundler
+package config
 package foreign-env
 package gi
 package git-flow
@@ -13,4 +14,6 @@ package rbenv
 package sublime
 package thefuck
 package z
+theme agnoster
 theme bobthefish
+theme slavic-cat

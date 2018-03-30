@@ -16,6 +16,8 @@
   df = diff
   st = status
 
+  cherry-pick = cherry-pick -x
+
   info = !git config --local -l
   rah = !git add --all && git reset --hard
   bg = "!sh -c \"git branch --list *$1*\" -"

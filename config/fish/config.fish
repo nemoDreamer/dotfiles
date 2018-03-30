@@ -23,6 +23,8 @@ set -g -x PATH "/sw/bin" $PATH
 set -g -x PATH "$HOME/Library/Application Support/Shotgun/vm.shotgun.local/site" $PATH
 # - Node.js
 set -g -x PATH "./node_modules/.bin" $PATH
+# NVM
+set -gx NVM_DIR "$HOME/.nvm"
 # - Python
 set -g -x PYTHONPATH "/sw/Library/Python/2.7/site-packages" $PYTHONPATH
 # - z
@@ -32,9 +34,11 @@ set -g default_user philip
 set -g theme_color_scheme dark
 set -g theme_display_git_ahead_verbose yes
 set -g theme_display_vagrant yes
+# set -g theme_display_node yes # <- NOTE: not official release (branch: display_node)
 set -g theme_display_vi no
 set -g theme_nerd_fonts yes
 # set -g theme_newline_cursor yes
+# set -g theme_prompt_break no # <- NOTE: not official release (branch: prompt-break)
 
 # Load oh-my-fish configuration.
 source "$OMF_PATH/init.fish"
