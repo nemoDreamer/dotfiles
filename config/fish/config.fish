@@ -27,7 +27,7 @@ set -g -x PATH "./node_modules/.bin" $PATH
 # NVM
 set -gx NVM_DIR "$HOME/.nvm"
 # - Python
-set -g -x PYTHONPATH "/sw/Library/Python/2.7/site-packages" $PYTHONPATH
+set -g -x PYTHONPATH "/usr/local/lib/python2.7/site-packages" $PYTHONPATH
 # - z
 set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
 # - BobTheFish
