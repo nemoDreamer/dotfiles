@@ -12,8 +12,12 @@ package python
 package rails
 package rbenv
 package sublime
-package thefuck
 package z
 theme agnoster
 theme bobthefish
+theme budspencer
+theme emoji-powerline
+theme flash
+theme ocean
 theme slavic-cat
+theme toaster

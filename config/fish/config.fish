@@ -17,10 +17,11 @@ set -g -x BUNDLE_TRAMPOLINE_FORCE 1
 # - Go
 set -g -x GOPATH $HOME/.gocode
 set -g -x PATH "$GOPATH/bin" $PATH
-# - Fink
-set -g -x PATH "/sw/bin" $PATH
 # - tank
 set -g -x PATH "$HOME/Library/Application Support/Shotgun/vm.shotgun.local/site" $PATH
+# # - wine
+# set -g -x PATH "/Applications/Wine Stable.app/Contents/Resources/start/bin" $PATH
+# set -g -x PATH "/Applications/Wine Stable.app/Contents/Resources/wine/bin" $PATH
 # - Node.js
 set -g -x PATH "./node_modules/.bin" $PATH
 # NVM
@@ -31,8 +32,12 @@ set -g -x PYTHONPATH "/sw/Library/Python/2.7/site-packages" $PYTHONPATH
 set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
 # - BobTheFish
 set -g default_user philip
-set -g theme_color_scheme dark
+set -g theme_color_scheme terminal
 set -g theme_display_git_ahead_verbose yes
+# set -g theme_display_git_dirty_verbose yes
+# set -g theme_display_git_master_branch yes
+set -g theme_git_worktree_support yes
+set -g theme_display_ruby yes
 set -g theme_display_vagrant yes
 # set -g theme_display_node yes # <- NOTE: not official release (branch: display_node)
 set -g theme_display_vi no
