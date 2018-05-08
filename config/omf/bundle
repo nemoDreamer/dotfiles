@@ -1,11 +1,10 @@
+package balias
 package brew
 package bundler
 package config
 package foreign-env
 package gi
 package git-flow
-package git@github.com:oh-my-fish/plugin-balias.git
-package git@github.com:oh-my-fish/plugin-git-flow.git
 package nvm
 package osx
 package python

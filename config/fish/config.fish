@@ -1,9 +1,3 @@
-# Path to Oh My Fish install.
-set -gx OMF_PATH "/Users/philip/.local/share/omf"
-
-# Customize Oh My Fish configuration path.
-set -gx OMF_CONFIG "/Users/philip/.config/omf"
-
 # Colors
 source "$HOME/.dotfiles/support/colors.sh"
 
@@ -32,6 +26,8 @@ set -g -x PYTHONPATH "/usr/local/lib/python2.7/site-packages" $PYTHONPATH
 set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
 # - BobTheFish
 set -g default_user philip
+set -g fish_prompt_pwd_dir_length 3
+set -g theme_project_dir_length 1
 set -g theme_color_scheme terminal
 set -g theme_display_git_ahead_verbose yes
 # set -g theme_display_git_dirty_verbose yes
@@ -45,5 +41,3 @@ set -g theme_nerd_fonts yes
 # set -g theme_newline_cursor yes
 # set -g theme_prompt_break no # <- NOTE: not official release (branch: prompt-break)
 
-# Load oh-my-fish configuration.
-source "$OMF_PATH/init.fish"
