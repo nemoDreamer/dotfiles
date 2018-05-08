@@ -41,3 +41,5 @@ set -g theme_nerd_fonts yes
 # set -g theme_newline_cursor yes
 # set -g theme_prompt_break no # <- NOTE: not official release (branch: prompt-break)
 
+# - Sensitive
+source "$HOME/.dotfiles/support/sensitive.sh"

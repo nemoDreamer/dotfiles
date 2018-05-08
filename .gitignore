@@ -21,4 +21,6 @@ config/yarn/global/node_modules
 config/yarn/global/yarn.lock
 config/yarn/link
 
+support/sensitive*
+
 *.sublime-workspace
