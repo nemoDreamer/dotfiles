@@ -43,3 +43,6 @@ set -g theme_nerd_fonts yes
 
 # - Sensitive
 source "$HOME/.dotfiles/support/sensitive.sh"
+
+# - Benny Hill!
+source "$HOME/.config/fish/functions/benny-hill.fish"

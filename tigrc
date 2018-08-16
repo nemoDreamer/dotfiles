@@ -25,3 +25,4 @@ set wrap-lines = true # Wrap long lines
 
 bind status X !rm %(file)
 bind status Z !git cz
+bind main P !git push

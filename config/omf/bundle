@@ -10,6 +10,7 @@ package osx
 package python
 package rails
 package rbenv
+package rustup
 package sublime
 package z
 theme agnoster

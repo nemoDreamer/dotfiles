@@ -1,5 +1,5 @@
 [format]
-  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset %C(bold)(%an)%C(nobold) %s %C(dim)%b%Creset
+  prettybkp = %Cblue%h%Creset %Cgreen[%ar]%Creset %C(bold)(%an)%C(nobold) %s %C(dim)%b%Creset
 
 [user]
   name = Philip Blyth
@@ -32,27 +32,42 @@
   branch = auto
   diff = auto
   status = auto
-  ui = auto
+	ui = true
 
-[pager]
-  log = diff-highlight | less
-  show = diff-highlight | less
-  diff = diff-highlight | less
-[interactive]
-  diffFilter = diff-highlight
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
 	attributesfile = ~/.gitattributes
+	pager = diff-highlight | less --tabs=4 -RFX
+
+[interactive]
+  diffFilter = diff-highlight
+
 [filter "media"]
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+
 [git-up "bundler"]
   check = true
 [git-up "fetch"]
   prune = true
+
+[push]
+	default = simple
 
 [difftool "kdiff3"]
     path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
@@ -67,6 +82,8 @@
     renames = true
     tool = araxis
 
+[merge]
+    tool = araxis
 [mergetool "kdiff3"]
     path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
 [mergetool "meld"]
@@ -77,18 +94,16 @@
 [mergetool]
     trustExitCode = false
     keepBackup = false
-[merge]
-    tool = araxis
-
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[push]
-	default = simple
+  
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
