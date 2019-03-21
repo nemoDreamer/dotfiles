@@ -56,3 +56,5 @@ The top of your `~/.login` might look like this:
 
     # recommended by brew doctor
     export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+Testing GitHub GraphQL API v4
