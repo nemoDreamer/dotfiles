@@ -110,5 +110,5 @@
 	process = git-lfs filter-process
 
 [include]
+	path = /Users/philip/.dotfiles/support/gitconfig.ini
 	path = /Users/philip/.adsk-git/config.include
-
