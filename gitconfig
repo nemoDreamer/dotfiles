@@ -2,8 +2,8 @@
   prettybkp = %Cblue%h%Creset %Cgreen[%ar]%Creset %C(bold)(%an)%C(nobold) %s %C(dim)%b%Creset
 
 [user]
-  name = Philip Blyth
-  email = philip.blyth@gmail.com
+	name = Philip Blyth
+	email = philip.blyth@autodesk.com
 
 [alias]
   aa = add --all
@@ -34,11 +34,11 @@
   status = auto
 	ui = true
 
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+# [color "diff-highlight"]
+# 	oldNormal = red bold
+# 	oldHighlight = red bold 52
+# 	newNormal = green bold
+# 	newHighlight = green bold 22
 [color "diff"]
 	meta = yellow
 	frag = magenta bold
@@ -51,10 +51,11 @@
   excludesfile = ~/.gitignore
   autocrlf = input
 	attributesfile = ~/.gitattributes
-	pager = diff-highlight | less --tabs=4 -RFX
+  # pager = diff-highlight | less --tabs=4 -RFX
+	pager = less --tabs=4 -RFX
 
 [interactive]
-  diffFilter = diff-highlight
+  # diffFilter = diff-highlight
 
 [filter "media"]
 	required = true
@@ -107,3 +108,7 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
+
+[include]
+	path = /Users/philip/.adsk-git/config.include
+

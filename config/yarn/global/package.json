@@ -1,6 +1,11 @@
 {
   "dependencies": {
     "benny-hill": "^1.2.0",
+    "chokidar-cli": "^1.2.1",
+    "conventional-changelog": "^2.0.3",
+    "conventional-changelog-cli": "^2.0.5",
+    "jscodeshift": "^0.6.3",
+    "jsinspect": "^0.12.7",
     "npm": "^6.1.0",
     "react-native-cli": "^2.0.1"
   }

@@ -8,16 +8,12 @@ package git-flow
 package nvm
 package osx
 package python
-package rails
-package rbenv
 package rustup
 package sublime
 package z
 theme agnoster
 theme bobthefish
-theme budspencer
 theme emoji-powerline
-theme flash
 theme ocean
 theme slavic-cat
 theme toaster

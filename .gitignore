@@ -5,17 +5,22 @@ fishd.*
 
 generated_completions
 
+config/asciinema
 config/configstore
 config/E_Line Media
 config/filezilla
 config/fontforge
 config/heroku
+config/insect-history
 config/Kalypso Media
 config/meld
 config/menus
 config/Might and Delight
 config/QtProject
 config/Unreal Engine
+
+config/fish/*_variables
+config/fish/functions/fish_prompt.fish
 
 config/yarn/global/node_modules
 config/yarn/global/yarn.lock
