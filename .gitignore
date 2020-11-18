@@ -10,6 +10,10 @@ config/configstore
 config/E_Line Media
 config/filezilla
 config/fontforge
+config/GameMakerStudio2
+config/gatsby
+config/GitHubUnity
+config/gops
 config/heroku
 config/insect-history
 config/Kalypso Media
@@ -30,3 +34,5 @@ support/sensitive*
 support/gitconfig.ini
 
 *.sublime-workspace
+
+yarn-error.log

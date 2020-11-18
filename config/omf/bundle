@@ -2,13 +2,14 @@ package balias
 package brew
 package bundler
 package config
+package direnv
 package foreign-env
 package gi
-package git-flow
+package git@git.autodesk.com:shotgun/omf-sg-shell-tools.git
 package nvm
 package osx
 package python
-package rustup
+package rbenv
 package sublime
 package z
 theme agnoster

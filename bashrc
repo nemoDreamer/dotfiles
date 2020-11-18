@@ -7,7 +7,7 @@ export GOPATH="$HOME/gocode"
 export PATH="$PATH:$GOPATH/bin"
 
 # Editor
-export VISUAL='subl -w'
+export VISUAL='code -w'
 export EDITOR=$VISUAL
 
 # Colors
@@ -27,3 +27,6 @@ export PS1="[\s-\v] \u > \[$(tput bold)\]\w\[$(tput sgr0)\] \$ "
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# ADSK
+export ADSK_USER=blythp
