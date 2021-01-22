@@ -37,15 +37,15 @@ set -g default_user philip
 # set -g theme_project_dir_length 1
 set -g theme_color_scheme terminal
 set -g theme_display_git_ahead_verbose yes
-# set -g theme_display_git_dirty_verbose yes
+set -g theme_display_git_dirty_verbose yes
 # set -g theme_display_git_master_branch yes
 # set -g theme_git_worktree_support yes
 set -g theme_display_ruby yes
-# set -g theme_display_vagrant no
+set -g theme_display_nvm yes
 # set -g theme_display_node yes # <- NOTE: not official release (branch: display_node)
 set -g theme_display_vi no
 set -g theme_nerd_fonts yes
-# set -g theme_newline_cursor yes
+set -g theme_newline_cursor yes
 # set -g theme_prompt_break no # <- NOTE: not official release (branch: prompt-break)
 
 # # keg-only caveats

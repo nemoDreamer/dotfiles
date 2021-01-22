@@ -20,8 +20,11 @@ config/Kalypso Media
 config/meld
 config/menus
 config/Might and Delight
+config/NuGet
 config/QtProject
+config/stetic
 config/Unreal Engine
+config/xbuild
 
 config/fish/*_variables
 config/fish/functions/fish_prompt.fish
