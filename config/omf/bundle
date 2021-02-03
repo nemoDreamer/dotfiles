@@ -14,7 +14,11 @@ package sublime
 package z
 theme agnoster
 theme bobthefish
+theme clearance
+theme default
 theme emoji-powerline
+theme flash
 theme ocean
+theme pure
 theme slavic-cat
 theme toaster

@@ -47,6 +47,11 @@ set -g theme_display_vi no
 set -g theme_nerd_fonts yes
 set -g theme_newline_cursor yes
 # set -g theme_prompt_break no # <- NOTE: not official release (branch: prompt-break)
+# - Disable vi prompt
+set -g fish_vi_mode_prompt no
+set -g fish_vi_key_bindings no
+function fish_mode_prompt
+end
 
 # # keg-only caveats
 # # - sqlite
