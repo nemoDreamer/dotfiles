@@ -5,6 +5,7 @@ fishd.*
 
 generated_completions
 
+config/.mono
 config/asciinema
 config/configstore
 config/E_Line Media
@@ -16,6 +17,7 @@ config/GitHubUnity
 config/gops
 config/heroku
 config/insect-history
+config/iterm2
 config/Kalypso Media
 config/meld
 config/menus

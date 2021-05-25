@@ -3,7 +3,6 @@
 
 [user]
 	name = Philip Blyth
-	email = philip.blyth@autodesk.com
 
 [alias]
   aa = add --all
@@ -101,7 +100,6 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-  
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -112,3 +110,5 @@
 [include]
 	path = /Users/philip/.dotfiles/support/gitconfig.ini
 	path = /Users/philip/.adsk-git/config.include
+[init]
+	defaultBranch = main
