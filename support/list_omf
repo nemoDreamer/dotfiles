@@ -1,0 +1,31 @@
+# Plugins
+
+balias
+direnv
+nvm
+rbenv
+brew
+fish-spec
+omf
+sg-shell-tools
+bundler
+foreign-env
+osx
+sublime
+config
+gi
+python
+z
+
+# Themes
+
+agnoster
+clearance
+emoji-powerline
+ocean
+slavic-cat
+bobthefish
+default
+flash
+pure
+toaster
