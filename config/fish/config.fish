@@ -22,8 +22,8 @@ set -g -x PATH "./node_modules/.bin" $PATH
 set -gx NVM_DIR "$HOME/.nvm"
 # - Python
 set -g -x PYTHONPATH "/usr/local/lib/python2.7/site-packages" $PYTHONPATH
-# - z
-set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
+# # - z
+# set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
 # - Vagrant
 set -g -x VAGRANT_USE_VAGRANT_TRIGGERS 1
 # - Groovy

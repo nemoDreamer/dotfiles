@@ -7,12 +7,14 @@ if [[ $SHELL != $bash_shell ]]; then
 	chsh -s $bash_shell
 fi
 
+
 info "You've still got the following dependencies installed:"
 echo "
-        - Homebrew
-        - rbenv
-        - TIG
-        - GRC
-        - fish
+        - brew
+          - fish
+          - git
+          - rbenv
+          - ruby-build
+          - tig
         - omf
 "

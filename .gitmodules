@@ -1,6 +1,0 @@
-[submodule "oh-my-fish"]
-	path = oh-my-fish
-	url = git://github.com/oh-my-fish/oh-my-fish.git
-[submodule "support/z"]
-	path = support/z
-	url = git@github.com:rupa/z.git

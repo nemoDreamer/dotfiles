@@ -17,13 +17,6 @@ else
 	success "rbenv already installed"
 fi
 
-# Git submodules
-info "Initializing git submodules\n"
-git submodule init
-
-info "Updating git submodules\n"
-git submodule update
-
 # Fish
 fish_shell="/usr/local/bin/fish"
 etc_shells="/etc/shells"
@@ -44,26 +37,4 @@ if [[ $SHELL != $fish_shell ]]; then
 	chsh -s $fish_shell
 else
 	success "Fish already default shell"
-fi
-
-# TIG
-tig_tmp="tig_tmp"
-tig_location="/usr/local"
-if [[ ! (tig) ]]; then
-	info "Installing TIG:"
-	git clone git://github.com/jonas/tig.git $tig_tmp
-	cd $tig_tmp
-	make prefix=$tig_location
-	sudo make install prefix=$tig_location
-	cd .. && rm-rf $tig_tmp
-else
-	success "TIG already installed"
-fi
-
-# GRC
-if [[ ! (grc) ]]; then
-	info "Installing GRC:"
-	./support/grc/install.sh
-else
-	success "GRC already installed"
 fi
