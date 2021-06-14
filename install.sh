@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 source ./support/functions.sh
 
@@ -18,16 +18,16 @@ for name in *; do
       if [ -d "$target" ]; then
         warn "$target is an existing directory"
       else
-        cutline=`grep -n -m1 "$cutstring" "$target" | sed "s/:.*//"`
+        cutline=$(grep -n -m1 "$cutstring" "$target" | sed "s/:.*//")
         if [ -n "$cutline" ]; then
-          cutline=$((cutline-1))
+          cutline=$((cutline - 1))
           success "Updating $target"
-          head -n $cutline "$target" > update_tmp
-          startline=`sed '1!G;h;$!d' "$name" | grep -n -m1 "$cutstring" | sed "s/:.*//"`
+          head -n $cutline "$target" >update_tmp
+          startline=$(sed '1!G;h;$!d' "$name" | grep -n -m1 "$cutstring" | sed "s/:.*//")
           if [ -n "$startline" ]; then
-            tail -n $startline "$name" >> update_tmp
+            tail -n $startline "$name" >>update_tmp
           else
-            cat "$name" >> update_tmp
+            cat "$name" >>update_tmp
           fi
           mv update_tmp "$target"
         else

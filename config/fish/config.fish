@@ -1,6 +1,8 @@
 # Colors
 source "$HOME/.dotfiles/support/colors.sh"
 
+# Homebrew
+eval (/opt/homebrew/bin/brew shellenv)
 # Settings
 set BROWSER open
 # - Editor
@@ -11,8 +13,6 @@ set -g -x BUNDLE_TRAMPOLINE_FORCE 1
 # - Go
 set -g -x GOPATH $HOME/.gocode
 set -g -x PATH "$GOPATH/bin" $PATH
-# - tank
-# set -g -x PATH "$HOME/Library/Application Support/Shotgun/vm.shotgun.local/site" $PATH
 # # - wine
 # set -g -x PATH "/Applications/Wine Stable.app/Contents/Resources/start/bin" $PATH
 # set -g -x PATH "/Applications/Wine Stable.app/Contents/Resources/wine/bin" $PATH
