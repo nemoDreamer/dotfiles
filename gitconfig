@@ -108,6 +108,6 @@
 	process = git-lfs filter-process
 
 [include]
-	path = /Users/philip/.dotfiles/support/gitconfig.ini
+	path = ~/.dotfiles/support/gitconfig.ini
 [init]
 	defaultBranch = main

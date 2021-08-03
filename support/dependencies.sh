@@ -1,6 +1,5 @@
 # Homebrew
-if ! command -v brew &> /dev/null
-then
+if ! command -v brew &> /dev/null; then
   info "Installing Homebrew:"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
@@ -9,7 +8,7 @@ else
 fi
 
 # rbenv
-if ! command -v rbenv &> /dev/null
+if ! command -v rbenv &> /dev/null; then
   info "Installing rbenv:"
   brew install rbenv ruby-build
 else
