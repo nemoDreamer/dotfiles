@@ -14,6 +14,7 @@ config/fontforge
 config/GameMakerStudio2
 config/gatsby
 config/GitHubUnity
+config/gitup
 config/gops
 config/heroku
 config/insect-history
@@ -24,6 +25,7 @@ config/menus
 config/Might and Delight
 config/NuGet
 config/QtProject
+config/simple-update-notifier
 config/stetic
 config/Unreal Engine
 config/xbuild

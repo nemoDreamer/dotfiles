@@ -1,9 +1,8 @@
-package brew
 package config
-package foreign-env
 package nvm
 package osx
-package rbenv
+package python
+package sublime
 package z
 theme agnoster
 theme bobthefish

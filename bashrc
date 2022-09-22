@@ -1,19 +1,17 @@
-export PATH="/usr/local/sbin:$PATH"
-
 # Homebrew
-eval $(/opt/homebrew/bin/brew shellenv)
+eval $(/usr/local/bin/brew shellenv)
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# # rbenv
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 # Go
 export GOPATH="$HOME/gocode"
 export PATH="$PATH:$GOPATH/bin"
 
 # Editor
-export VISUAL='code -w'
-export EDITOR=$VISUAL
+export VISUAL="nano"
+export EDITOR="nano"
 
 # Colors
 # export TERM=xterm-color # handled by iTerm

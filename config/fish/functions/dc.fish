@@ -1,5 +1,5 @@
 # function dc
-#   docker-compose
+#   docker compose $argv
 # end
 
-alias dc=docker-compose
+alias dc="docker compose"

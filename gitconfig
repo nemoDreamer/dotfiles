@@ -3,6 +3,7 @@
 
 [user]
 	name = Philip Blyth
+	email = philip.blyth@gmail.com
 
 [alias]
   aa = add --all
@@ -20,6 +21,7 @@
   info = !git config --local -l
   rah = !git add --all && git reset --hard
   bg = "!sh -c \"git branch --list *$1*\" -"
+  up = !gitup
 
   fs = !git flow feature start
   ff = !git flow feature finish
@@ -83,7 +85,8 @@
     tool = araxis
 
 [merge]
-    tool = araxis
+	tool = code
+	conflictstyle = merge
 [mergetool "kdiff3"]
     path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
 [mergetool "meld"]
@@ -111,3 +114,5 @@
 	path = ~/.dotfiles/support/gitconfig.ini
 [init]
 	defaultBranch = main
+[mergetool "code"]
+	cmd = \"/Applications/Visual Studio Code.app/Contents/MacOS/Electron\" \"$BASE\"

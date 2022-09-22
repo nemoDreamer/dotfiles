@@ -2,37 +2,55 @@
 source "$HOME/.dotfiles/support/colors.sh"
 
 # Homebrew
-eval (/opt/homebrew/bin/brew shellenv)
+eval (/usr/local/bin/brew shellenv)
+
 # Settings
+
 set BROWSER open
+
 # - Editor
-set -g -x EDITOR "code -w"
-set -g -x VISUAL "code -w"
+set -gx EDITOR "code -w"
+set -gx VISUAL "code -w"
+
 # - Bundler
-set -g -x BUNDLE_TRAMPOLINE_FORCE 1
+set -gx BUNDLE_TRAMPOLINE_FORCE 1
+
 # - Go
-set -g -x GOPATH $HOME/.gocode
-set -g -x PATH "$GOPATH/bin" $PATH
+set -gx GOPATH $HOME/.gocode
+set -gx PATH "$GOPATH/bin" $PATH
+
 # # - wine
-# set -g -x PATH "/Applications/Wine Stable.app/Contents/Resources/start/bin" $PATH
-# set -g -x PATH "/Applications/Wine Stable.app/Contents/Resources/wine/bin" $PATH
+# set -gx PATH "/Applications/Wine Stable.app/Contents/Resources/start/bin" $PATH
+# set -gx PATH "/Applications/Wine Stable.app/Contents/Resources/wine/bin" $PATH
+
 # - Node.js
-set -g -x PATH "./node_modules/.bin" $PATH
-# NVM
+set -gx PATH "./node_modules/.bin" $PATH
+
+# - NVM
 set -gx NVM_DIR "$HOME/.nvm"
+
 # - Python
-set -g -x PYTHONPATH "/usr/local/lib/python2.7/site-packages" $PYTHONPATH
-# # - z
-# set -g Z_SCRIPT_PATH "$HOME/.dotfiles/support/z/z.sh"
+# set -gx PYTHONPATH "/usr/local/lib/python2.7/site-packages" $PYTHONPATH
+set -gx PATH "/Users/philipblyth/Library/Python/2.7/bin" $PATH
+# - PyEnv
+status is-interactive; and pyenv init --path | source
+pyenv init - | source
+# pyenv virtualenv-init - | source
+set -gx WORKON_HOME ~/.venvs
+set -gx VIRTUAL_ENV_DISABLE_PROMPT 1
+
 # - Vagrant
-set -g -x VAGRANT_USE_VAGRANT_TRIGGERS 1
+set -gx VAGRANT_USE_VAGRANT_TRIGGERS 1
+
 # - Groovy
-set -g -x GROOVY_HOME "/usr/local/opt/groovy/libexec"
+set -gx GROOVY_HOME "/usr/local/opt/groovy/libexec"
+
 # - Ruby
 set OPENSSL_DIR (brew --prefix openssl@1.1)
-set -g -x RUBY_CONFIGURE_OPTS "--with-openssl-dir=$OPENSSL_DIR"
+set -gx RUBY_CONFIGURE_OPTS "--with-openssl-dir=$OPENSSL_DIR"
+
 # - BobTheFish
-set -g default_user philip
+set -g default_user philipblyth
 # set -g fish_prompt_pwd_dir_length 3
 # set -g theme_project_dir_length 1
 set -g theme_color_scheme terminal
@@ -50,27 +68,29 @@ set -g theme_newline_cursor yes
 # - Disable vi prompt
 set -g fish_vi_mode_prompt no
 set -g fish_vi_key_bindings no
-function fish_mode_prompt
-end
+# function fish_mode_prompt
+# end
 
-# # keg-only caveats
-# # - sqlite
-# set -gx LDFLAGS "-L/usr/local/opt/sqlite/lib"
-# set -gx CPPFLAGS "-I/usr/local/opt/sqlite/include"
-# set -gx PKG_CONFIG_PATH "/usr/local/opt/sqlite/lib/pkgconfig"
-# # - libpg
-# set -gx LDFLAGS "-L/usr/local/opt/libpq/lib"
-# set -gx CPPFLAGS "-I/usr/local/opt/libpq/include"
-# set -gx PKG_CONFIG_PATH "/usr/local/opt/libpq/lib/pkgconfig"
-# # - curl-openssl
-# set -gx LDFLAGS "-L/usr/local/opt/curl-openssl/lib"
-# set -gx CPPFLAGS "-I/usr/local/opt/curl-openssl/include"
-# set -gx PKG_CONFIG_PATH "/usr/local/opt/curl-openssl/lib/pkgconfig"
-# - openssl
-set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
-set -gx LDFLAGS "-L/usr/local/opt/openssl@1.1/lib"
-set -gx CPPFLAGS "-I/usr/local/opt/openssl@1.1/include"
-set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
+# - Scripts
+set -g SCRIPT_SAY_POSTURE 0
+
+# keg-only caveats
+# - SSL
+#   - LibreSSL
+set LIBRESSL_DIR (brew --prefix libressl)
+set -gx PATH "$LIBRESSL_DIR/bin" $PATH
+#   - OpenSSL
+set OPENSSL_DIR (brew --prefix openssl)
+set -gx PATH "$OPENSSL_DIR/bin" $PATH
+set -gx LDFLAGS "-L$OPENSSL_DIR/lib"
+set -gx CPPFLAGS "-I$OPENSSL_DIR/include"
+set -gx PKG_CONFIG_PATH "$OPENSSL_DIR/lib/pkgconfig"
+#   - combine both:
+set -gx LIBRARY_PATH "$OPENSSL_DIR/lib" "$LIBRESSL_DIR/lib" $LIBRARY_PATH
+
+# aliases
+# - avoid multiple VS Code icons in "Recent" dock:
+alias code='open -b com.microsoft.VSCode'
 
 # - Sensitive
 source "$HOME/.dotfiles/support/sensitive.sh"
