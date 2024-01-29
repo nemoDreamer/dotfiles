@@ -9,8 +9,8 @@ eval (/opt/homebrew/bin/brew shellenv)
 set BROWSER open
 
 # - Editor
-set -gx EDITOR "code -w"
-set -gx VISUAL "code -w"
+set -gx EDITOR "code -W"
+set -gx VISUAL "code -W"
 
 # - Bundler
 set -gx BUNDLE_TRAMPOLINE_FORCE 1
