@@ -1,62 +1,63 @@
 [format]
-  prettybkp = %Cblue%h%Creset %Cgreen[%ar]%Creset %C(bold)(%an)%C(nobold) %s %C(dim)%b%Creset
+	prettybkp = %Cblue%h%Creset %Cgreen[%ar]%Creset %C(bold)(%an)%C(nobold) %s %C(dim)%b%Creset
 
 [user]
 	name = Philip Blyth
 	email = philip.blyth@gmail.com
 
 [alias]
-  aa = add --all
-  ap = add --patch
-  br = branch
-  ca = commit --amend
-  ci = commit
-  civ = commit -v
-  co = checkout
-  df = diff
-  st = status
+	aa = add --all
+	ap = add --patch
+	br = branch
+	ca = commit --amend
+	ci = commit
+	civ = commit -v
+	co = checkout
+	df = diff
+	st = status
 
-  cherry-pick = cherry-pick -x
+	cherry-pick = cherry-pick -x
 
-  info = !git config --local -l
-  rah = !git add --all && git reset --hard
-  bg = "!sh -c \"git branch --list *$1*\" -"
-  up = !gitup
+	info = !git config --local -l
+	rah = !git add --all && git reset --hard
+	bg = "!sh -c \"git branch --list *$1*\" -"
+	up = !gitup .
 
-  fs = !git flow feature start
-  ff = !git flow feature finish
-  fc = !git flow feature checkout
+	fs = !git flow feature start
+	ff = !git flow feature finish
+	fc = !git flow feature checkout
 
-  stash-rename = "!_() { rev=$(git rev-parse $1) && git stash drop $1 || exit 1 ; git stash store -m \"$2\" $rev; }; _"
+	stash-rename = "!_() { rev=$(git rev-parse $1) && git stash drop $1 || exit 1 ; git stash store -m \"$2\" $rev; }; _"
 
 [color]
-  branch = auto
-  diff = auto
-  status = auto
+	branch = auto
+	diff = auto
+	status = auto
 	ui = true
 
 # [color "diff-highlight"]
-# 	oldNormal = red bold
-# 	oldHighlight = red bold 52
-# 	newNormal = green bold
-# 	newHighlight = green bold 22
-[color "diff"]
-	meta = yellow
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+	# oldNormal = red bold
+	# oldHighlight = red bold 52
+	# newNormal = green bold
+	# newHighlight = green bold 22
+
+# [color "diff"]
+# 	meta = yellow
+# 	frag = magenta bold
+# 	commit = yellow bold
+# 	old = red bold
+# 	new = green bold
+# 	whitespace = red reverse
 
 [core]
-  excludesfile = ~/.gitignore
-  autocrlf = input
+	excludesfile = ~/.gitignore
+	autocrlf = input
 	attributesfile = ~/.gitattributes
-  # pager = diff-highlight | less --tabs=4 -RFX
+	# pager = diff-highlight | less --tabs=4 -RFX
 	pager = less --tabs=4 -RFX
 
 [interactive]
-  # diffFilter = diff-highlight
+	# diffFilter = diff-highlight
 
 [filter "media"]
 	required = true
@@ -64,45 +65,52 @@
 	smudge = git media smudge %f
 
 [git-up "bundler"]
-  check = true
+	check = true
 [git-up "fetch"]
-  prune = true
+	prune = true
 
 [push]
 	default = simple
 
-[difftool "kdiff3"]
-    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
-[difftool "meld"]
-    path = /sw/bin/meld
-[difftool "araxis"]
-    path = /Applications/Araxis Merge.app/Contents/Utilities/compare
-[difftool]
-    trustExitCode = false
-    prompt = false
 [diff]
-    renames = true
-    tool = araxis
+	renames = true
+	tool = araxis
+[difftool]
+	trustExitCode = false
+	prompt = false
 
 [merge]
 	tool = code
 	conflictstyle = merge
-[mergetool "kdiff3"]
-    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
-[mergetool "meld"]
-    path = /sw/bin/meld
-[mergetool "araxis"]
-    path = /Applications/Araxis Merge.app/Contents/Utilities/compare
-    keepTemporaries = false
 [mergetool]
-    trustExitCode = false
-    keepBackup = false
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	trustExitCode = false
+	keepBackup = false
+
+[mergetool "kdiff3"]
+	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+[difftool "kdiff3"]
+	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+
+[mergetool "meld"]
+	path = /sw/bin/meld
+[difftool "meld"]
+	path = /sw/bin/meld
+
+[mergetool "araxis"]
+	path = /Applications/Araxis Merge.app/Contents/Utilities/compare
+	keepTemporaries = false
+[difftool "araxis"]
+	path = /Applications/Araxis Merge.app/Contents/Utilities/compare
+
+[mergetool "code"]
+	cmd = \"/Applications/Visual Studio Code.app/Contents/MacOS/Electron\" \"$BASE\"
+
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -114,5 +122,3 @@
 	path = ~/.dotfiles/support/gitconfig.ini
 [init]
 	defaultBranch = main
-[mergetool "code"]
-	cmd = \"/Applications/Visual Studio Code.app/Contents/MacOS/Electron\" \"$BASE\"

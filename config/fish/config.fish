@@ -2,7 +2,7 @@
 source "$HOME/.dotfiles/support/colors.sh"
 
 # Homebrew
-eval (/usr/local/bin/brew shellenv)
+eval (/opt/homebrew/bin/brew shellenv)
 
 # Settings
 
@@ -29,9 +29,9 @@ set -gx PATH "./node_modules/.bin" $PATH
 # - NVM
 set -gx NVM_DIR "$HOME/.nvm"
 
-# - Python
-# set -gx PYTHONPATH "/usr/local/lib/python2.7/site-packages" $PYTHONPATH
-set -gx PATH "/Users/philipblyth/Library/Python/2.7/bin" $PATH
+# # - Python
+# # set -gx PYTHONPATH "/usr/local/lib/python2.7/site-packages" $PYTHONPATH
+# set -gx PATH "/Users/philipblyth/Library/Python/2.7/bin" $PATH
 # - PyEnv
 status is-interactive; and pyenv init --path | source
 pyenv init - | source
@@ -82,15 +82,21 @@ set -gx PATH "$LIBRESSL_DIR/bin" $PATH
 #   - OpenSSL
 set OPENSSL_DIR (brew --prefix openssl)
 set -gx PATH "$OPENSSL_DIR/bin" $PATH
-set -gx LDFLAGS "-L$OPENSSL_DIR/lib"
-set -gx CPPFLAGS "-I$OPENSSL_DIR/include"
-set -gx PKG_CONFIG_PATH "$OPENSSL_DIR/lib/pkgconfig"
 #   - combine both:
 set -gx LIBRARY_PATH "$OPENSSL_DIR/lib" "$LIBRESSL_DIR/lib" $LIBRARY_PATH
+
+# - Make/build/packages:
+set -gx LDFLAGS "-L /opt/homebrew/lib"
+set -gx CPPFLAGS "-I /opt/homebrew/include"
+set -gx CPLUS_INCLUDE_PATH "/opt/homebrew/include"
+set -gx CPATH "/opt/homebrew/include"
+# requires `brew install pkg-config`
+set -gx PKG_CONFIG_PATH "/opt/homebrew/lib/pkgconfig/"
 
 # aliases
 # - avoid multiple VS Code icons in "Recent" dock:
 alias code='open -b com.microsoft.VSCode'
+alias matrix='unimatrix -af -c blue -s 95'
 
 # - Sensitive
 source "$HOME/.dotfiles/support/sensitive.sh"
@@ -100,3 +106,9 @@ source "$HOME/.config/fish/functions/benny-hill.fish"
 
 # iTerm shell integration
 # source ~/.iterm2_shell_integration.(basename $SHELL)
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+matrix -w -s 99
