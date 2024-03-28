@@ -10,8 +10,8 @@ export GOPATH="$HOME/gocode"
 export PATH="$PATH:$GOPATH/bin"
 
 # Editor
-export VISUAL="code -W"
-export EDITOR="code -W"
+export VISUAL="code -w"
+export EDITOR="code -w"
 
 # Colors
 # export TERM=xterm-color # handled by iTerm

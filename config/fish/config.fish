@@ -9,8 +9,8 @@ eval (/opt/homebrew/bin/brew shellenv)
 set BROWSER open
 
 # - Editor
-set -gx EDITOR "code -W"
-set -gx VISUAL "code -W"
+set -gx EDITOR "code -w"
+set -gx VISUAL "code -w"
 
 # - Bundler
 set -gx BUNDLE_TRAMPOLINE_FORCE 1
@@ -28,6 +28,7 @@ set -gx PATH "./node_modules/.bin" $PATH
 
 # - NVM
 set -gx NVM_DIR "$HOME/.nvm"
+load_nvm > /dev/stderr
 
 # # - Python
 # # set -gx PYTHONPATH "/usr/local/lib/python2.7/site-packages" $PYTHONPATH
@@ -110,5 +111,7 @@ source "$HOME/.config/fish/functions/benny-hill.fish"
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+set --export SCRIPT_SAY_POSTURE "0"
 
 matrix -w -s 99

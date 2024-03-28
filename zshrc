@@ -10,5 +10,5 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$(brew --prefix openssl)/bin:$PATH"
 
 # editors
-export EDITOR="code -W"
-export VISUAL="code -W"
+export EDITOR="code -w"
+export VISUAL="code -w"
