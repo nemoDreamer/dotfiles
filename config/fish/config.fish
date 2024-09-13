@@ -99,6 +99,11 @@ set -gx PKG_CONFIG_PATH "/opt/homebrew/lib/pkgconfig/"
 alias code='open -b com.microsoft.VSCode'
 alias matrix='unimatrix -af -c blue -s 95'
 
+alias yeet=exit
+
+# `npm` has this, but no `yarn`...:
+abbr --add --position anywhere isntall install
+
 # - Sensitive
 source "$HOME/.dotfiles/support/sensitive.sh"
 

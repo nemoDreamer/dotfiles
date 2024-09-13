@@ -13,6 +13,8 @@ config/filezilla
 config/fontforge
 config/GameMakerStudio2
 config/gatsby
+config/gh
+config/gh-copilot
 config/GitHubUnity
 config/gitup
 config/gops
