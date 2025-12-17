@@ -28,6 +28,7 @@ set -gx PATH "./node_modules/.bin" $PATH
 
 # - NVM
 set -gx NVM_DIR "$HOME/.nvm"
+load_nvm > /dev/stderr
 
 # - Butler
 set -gx PATH "/Users/philip/Library/Application Support/itch/apps/butler" $PATH
@@ -100,6 +101,11 @@ set -gx PKG_CONFIG_PATH "/opt/homebrew/lib/pkgconfig/"
 alias code='open -b com.microsoft.VSCode'
 alias matrix='unimatrix -af -c blue -s 95'
 
+alias yeet=exit
+
+# `npm` has this, but no `yarn`...:
+abbr --add --position anywhere isntall install
+
 # - Sensitive
 source "$HOME/.dotfiles/support/sensitive.sh"
 
@@ -112,6 +118,8 @@ source "$HOME/.config/fish/functions/benny-hill.fish"
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+set --export SCRIPT_SAY_POSTURE "0"
 
 matrix -w -s 99
 

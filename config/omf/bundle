@@ -1,6 +1,6 @@
+package bass
 package config
 package foreign-env
-package nvm
 package osx
 package sublime
 package z
