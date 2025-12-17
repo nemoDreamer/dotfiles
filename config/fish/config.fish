@@ -29,9 +29,11 @@ set -gx PATH "./node_modules/.bin" $PATH
 # - NVM
 set -gx NVM_DIR "$HOME/.nvm"
 
+# - Butler
+set -gx PATH "/Users/philip/Library/Application Support/itch/apps/butler" $PATH
+
 # # - Python
-# # set -gx PYTHONPATH "/usr/local/lib/python2.7/site-packages" $PYTHONPATH
-# set -gx PATH "/Users/philipblyth/Library/Python/2.7/bin" $PATH
+# set -gx PATH (pyenv prefix)/lib/python3.12/site-packages $PATH
 # - PyEnv
 status is-interactive; and pyenv init --path | source
 pyenv init - | source
@@ -112,3 +114,10 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 matrix -w -s 99
+
+# pnpm
+set -gx PNPM_HOME "/Users/philip/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
