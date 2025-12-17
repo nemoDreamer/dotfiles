@@ -52,28 +52,6 @@ set -gx GROOVY_HOME "/usr/local/opt/groovy/libexec"
 set OPENSSL_DIR (brew --prefix openssl@1.1)
 set -gx RUBY_CONFIGURE_OPTS "--with-openssl-dir=$OPENSSL_DIR"
 
-# - BobTheFish
-set -g default_user philipblyth
-# set -g fish_prompt_pwd_dir_length 3
-# set -g theme_project_dir_length 1
-set -g theme_color_scheme terminal
-set -g theme_display_git_ahead_verbose yes
-set -g theme_display_git_dirty_verbose yes
-# set -g theme_display_git_master_branch yes
-# set -g theme_git_worktree_support yes
-set -g theme_display_ruby yes
-set -g theme_display_nvm yes
-# set -g theme_display_node yes # <- NOTE: not official release (branch: display_node)
-set -g theme_display_vi no
-set -g theme_nerd_fonts yes
-set -g theme_newline_cursor yes
-# set -g theme_prompt_break no # <- NOTE: not official release (branch: prompt-break)
-# - Disable vi prompt
-set -g fish_vi_mode_prompt no
-set -g fish_vi_key_bindings no
-# function fish_mode_prompt
-# end
-
 # - Scripts
 set -g SCRIPT_SAY_POSTURE 0
 
