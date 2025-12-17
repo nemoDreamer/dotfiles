@@ -9,6 +9,8 @@ config/.mono
 config/asciinema
 config/configstore
 config/E_Line Media
+config/E-Line Media
+config/expressvpn
 config/filezilla
 config/fontforge
 config/GameMakerStudio2
@@ -39,8 +41,10 @@ config/yarn/global/node_modules
 config/yarn/global/yarn.lock
 config/yarn/link
 
+# sensitive data:
 support/sensitive*
 support/gitconfig.ini
+credentials.json
 
 *.sublime-workspace
 

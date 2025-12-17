@@ -19,10 +19,6 @@ set -gx BUNDLE_TRAMPOLINE_FORCE 1
 set -gx GOPATH $HOME/.gocode
 set -gx PATH "$GOPATH/bin" $PATH
 
-# # - wine
-# set -gx PATH "/Applications/Wine Stable.app/Contents/Resources/start/bin" $PATH
-# set -gx PATH "/Applications/Wine Stable.app/Contents/Resources/wine/bin" $PATH
-
 # - NVM
 load_nvm > /dev/stderr
 

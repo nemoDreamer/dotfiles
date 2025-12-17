@@ -34,9 +34,8 @@
 #   directory writable by others, with sticky bit
 #   directory writable by others, without sticky bit
 
-# The default is "exfxcxdxbxegedabagacad"
-
 set -g -x LSCOLORS "Exfxcxdxbxegedabagacad"
+#         DEFAULT: "exfxcxdxbxegedabagacad"
 
 # Fish colors:
 set -U fish_color_normal normal
@@ -45,7 +44,7 @@ set -U fish_color_keyword normal
 set -U fish_color_quote yellow
 set -U fish_color_redirection cyan --bold
 set -U fish_color_end green
-set -U fish_color_error brred
+set -U fish_color_error red # brred
 set -U fish_color_param cyan
 set -U fish_color_comment red
 set -U fish_color_selection white --bold --background=brblack
