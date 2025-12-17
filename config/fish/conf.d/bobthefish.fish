@@ -18,8 +18,7 @@ set -g theme_display_git_dirty_verbose yes
 
 # enhancements:
 set -g theme_display_ruby yes
-set -g theme_display_nvm yes
-set -g theme_display_node always
+set -g theme_display_node yes
 set -g theme_display_vi no
 
 set -g theme_newline_cursor yes

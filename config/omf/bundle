@@ -1,6 +1,7 @@
 package bass
 package config
 package foreign-env
+package node-binpath
 package nvm
 package osx
 package sublime

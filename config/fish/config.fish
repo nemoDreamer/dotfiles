@@ -23,11 +23,7 @@ set -gx PATH "$GOPATH/bin" $PATH
 # set -gx PATH "/Applications/Wine Stable.app/Contents/Resources/start/bin" $PATH
 # set -gx PATH "/Applications/Wine Stable.app/Contents/Resources/wine/bin" $PATH
 
-# - Node.js
-set -gx PATH "./node_modules/.bin" $PATH
-
 # - NVM
-set -gx NVM_DIR "$HOME/.nvm"
 load_nvm > /dev/stderr
 
 # - Butler
