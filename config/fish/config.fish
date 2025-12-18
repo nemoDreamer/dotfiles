@@ -19,9 +19,6 @@ set -gx BUNDLE_TRAMPOLINE_FORCE 1
 set -gx GOPATH $HOME/.gocode
 set -gx PATH "$GOPATH/bin" $PATH
 
-# - NVM
-load_nvm > /dev/stderr
-
 # - Butler
 set -gx PATH "/Users/philip/Library/Application Support/itch/apps/butler" $PATH
 
@@ -91,11 +88,14 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 set --export SCRIPT_SAY_POSTURE "0"
 
-matrix -w -s 99
-
 # pnpm
 set -gx PNPM_HOME "/Users/philip/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+matrix -w -s 99
+
+# - NVM
+load_nvm > /dev/stderr
