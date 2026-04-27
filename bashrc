@@ -33,3 +33,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"
