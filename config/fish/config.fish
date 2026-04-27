@@ -1,3 +1,5 @@
+# c:spell:ignore: CPATH, CPLUS_INCLUDE_PATH, CPPFLAGS, isntall, LDFLAGS, venvs, WORKON_HOME, yeet
+
 # Colors
 source "$HOME/.dotfiles/support/colors.sh"
 
@@ -7,6 +9,8 @@ eval (/opt/homebrew/bin/brew shellenv)
 # Settings
 
 set BROWSER open
+
+set --global fish_key_bindings fish_default_key_bindings
 
 # - Editor
 set -gx EDITOR "code -w"
@@ -99,3 +103,5 @@ matrix -w -s 99
 
 # - NVM
 load_nvm > /dev/stderr
+
+set -gx PATH "$HOME/.local/bin" $PATH
