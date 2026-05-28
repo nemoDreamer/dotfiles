@@ -19,6 +19,9 @@ set -gx VISUAL "code -w"
 # - Bundler
 set -gx BUNDLE_TRAMPOLINE_FORCE 1
 
+# - Node
+set -gx PATH "./node_modules/.bin/" $PATH
+
 # - Go
 set -gx GOPATH $HOME/.gocode
 set -gx PATH "$GOPATH/bin" $PATH
