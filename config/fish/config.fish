@@ -45,7 +45,7 @@ set -gx VAGRANT_USE_VAGRANT_TRIGGERS 1
 set -gx GROOVY_HOME "/usr/local/opt/groovy/libexec"
 
 # - Ruby
-set OPENSSL_DIR (brew --prefix openssl@1.1)
+set OPENSSL_DIR (brew --prefix openssl)
 set -gx RUBY_CONFIGURE_OPTS "--with-openssl-dir=$OPENSSL_DIR"
 
 # - Scripts
