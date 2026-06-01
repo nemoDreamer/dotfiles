@@ -7,7 +7,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/etc/bash_completion.d/nvm" ] && . "$NVM_DIR/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # OpenSSL
-export PATH="$(brew --prefix openssl)/bin:$PATH"
+export PATH="$(brew --prefix openssl)/bin:./node_modules/.bin:$PATH"
 
 # editors
 export EDITOR="code -w"
